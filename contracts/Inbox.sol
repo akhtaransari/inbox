@@ -1,14 +1,20 @@
-pragma solidity ^0.4.17;
-// linter warnings (red underline) about pragma version can igonored!
+// SPDX-License-Identifier: MIT
 
-// contract code will go here
-contract Inbox{
+// Solidity version pragma
+pragma solidity ^0.8.9;
+
+// Contract definition
+contract Inbox {
+    // State variable to store the message
     string public message;
-    function Inbox (string initMessage) public {
-        message = initMessage;
+
+    // Constructor function to initialize the message
+    constructor(string memory initialMessage) {
+        message = initialMessage;
     }
 
-    function setMessage (string initMessage) public {
-        message = initMessage;
+    // Function to set a new message
+    function setMessage(string memory newMessage) public {
+        message = newMessage;
     }
 }
